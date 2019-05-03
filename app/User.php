@@ -36,4 +36,22 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Relación hacia el cargo que ocupa
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function cargo()
+    {
+        return $this->belongsTo('App\Cargo');
+    }
+
+    /**
+     * @param $query mixed
+     * @return mixed
+     */
+    public function scopeActivo($query)
+    {
+        return $query->where('activo', true);
+    }
 }
