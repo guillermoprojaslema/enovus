@@ -42,6 +42,8 @@
                     <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
                 </ul>
             </li>
+
+            <li class="active"><a href="{{ route('reportes.index') }}"><i class='fa fa-file-excel-o'></i> <span>Reportes</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
