@@ -21,6 +21,8 @@ class CreatePreguntasTable extends Migration
             $table->softDeletes();
         });
 
+        /**/
+
         Schema::table('preguntas', function (Blueprint $table) {
             $table->foreign('evaluacion_id')->references('id')->on('evaluaciones')->onDelete('set null');
         });

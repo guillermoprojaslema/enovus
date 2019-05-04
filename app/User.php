@@ -46,12 +46,16 @@ class User extends Authenticatable
         return $this->belongsTo('App\Cargo');
     }
 
+    public function evaluacion(){
+        return $this->hasOne('App\Evaluacion', 'evaluado_id');
+    }
+
     /**
      * @param $query mixed
      * @return mixed
      */
     public function scopeActivo($query)
     {
-        return $query->where('activo', true);
+        return $query->where('estado', true);
     }
 }

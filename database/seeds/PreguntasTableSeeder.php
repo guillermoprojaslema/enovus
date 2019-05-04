@@ -19,6 +19,7 @@ class PreguntasTableSeeder extends Seeder
             $pregunta = new Pregunta();
             $pregunta->titulo = 'Pregunta ' . $i  . ' para Analista';
             $pregunta->evaluacion_id= 1;
+            $pregunta->save();
 
         }
 
@@ -26,7 +27,7 @@ class PreguntasTableSeeder extends Seeder
             $pregunta = new Pregunta();
             $pregunta->titulo = 'Pregunta ' . $i  . ' para Programador';
             $pregunta->evaluacion_id= 2;
-
+            $pregunta->save();
         }
 
         $this->command->info('Cargadoo Preguntas de prueba con éxito');
