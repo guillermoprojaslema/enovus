@@ -11,6 +11,6 @@ class Pregunta extends Model
     }
 
     public function respuestas(){
-        return $this->hasMany('App\Respuesta');
+        return $this->belongsToMany('App\Respuesta');
     }
 }

@@ -8,6 +8,6 @@ class Respuesta extends Model
 {
     public function pregunta()
     {
-        return $this->hasMany('App\Pregunta');
+        return $this->belongsToMany('App\Pregunta');
     }
 }

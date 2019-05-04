@@ -15,7 +15,7 @@ class PreguntaRespuestaTable extends Migration
     {
         Schema::create('pregunta_respuesta', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('valor');
+            $table->integer('valor')->nullable();
             $table->unsignedBigInteger('pregunta_id')->nullable();
             $table->unsignedBigInteger('respuesta_id')->nullable();
         });
